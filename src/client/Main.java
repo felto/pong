@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 
 public class Main {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws MalformedURLException, IOException {
 		System.out.println("YOU GIT!");
 		System.out.println("NO, YOU'RE A GIT!");
 		
