@@ -2,9 +2,7 @@ package client;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -29,12 +27,7 @@ public class Main {
 
 			@Override
 			public void paint(Graphics g) {
-				g.drawImage(img, 0, 0, new ImageObserver() {
-					@Override
-					public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
-						return true;
-					}
-				});
+				g.drawImage(img, 0, 0, null);
 			}
 		});
 		
