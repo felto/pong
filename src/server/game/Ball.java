@@ -1,4 +1,4 @@
-package server;
+package server.game;
 
 public class Ball {
 	public static final int RADIUS_DEFAULT = 10;
