@@ -19,6 +19,7 @@ public class Main {
 	public static void main(String args[]) throws MalformedURLException, IOException {
 		System.out.println("YOU GIT!");
 		System.out.println("NO, YOU'RE A GIT!");
+		System.out.println("NO, YOU'RE A GIT!");
 		
 		final BufferedImage img = ImageIO.read(new URL("http://www.baconbabble.com/wp-content/uploads/2011/05/smile-1.jpg"));
 		JFrame jF = new JFrame(":)");
