@@ -1,50 +1,89 @@
 package server;
 
 public class Ball {
-	public static final int RADIUS = 10;
+	public static final int RADIUS_DEFAULT = 10;
 	
-	private int posX;
-	private int posY;
+	private double posX;
+	private double posY;
 	
-	private int velX;
-	private int velY;
+	private double velX;
+	private double velY;
 	
-	public Ball(int posX, int posY) {
-		this.setPosX(posX);
-		this.setPosX(posY);
-		
-		this.setVelX(0);
-		this.setVelY(0);
+	private int radius;
+	
+	
+	
+	/**
+	 * Ball at (0, 0). Default radius.
+	 */
+	public Ball() {
+		this(0, 0);
+	}
+	
+	/**
+	 * Ball at (posX, posY). Default radius.
+	 * 
+	 * @param <b>posX</b>: x-position.
+	 * @param <b>posY</b>: y-position.
+	 */
+	public Ball(double posX, double posY) {
+		this(posX, posY, RADIUS_DEFAULT);
 	}
 
+	/**
+	 * Ball at (posX, posY) with the given radius.
+	 * 
+	 * @param <b>posX</b>: x-position.
+	 * @param <b>posY</b>: y-position.
+	 * @param <b>radius</b>: ball radius.
+	 */
+	public Ball(double posX, double posY, int radius) {
+		setPosX(posX);
+		setPosX(posY);
+		
+		setVelX(0);
+		setVelY(0);
+		
+		setRadius(radius);
+	}
 	
-	public int getPosX() {
+	
+	
+	public int getRadius() {
+		return radius;
+	}
+	public void setRadius(int radius) {
+		if(radius <= 0) {
+			throw new IllegalArgumentException("Radius must be > 0, given radius is " + radius + ".");
+		}
+		this.radius = radius;
+	}
+
+	public double getPosX() {
 		return posX;
 	}
-	public void setPosX(int posX) {
+	public void setPosX(double posX) {
 		this.posX = posX;
 	}
 
-	public int getPosY() {
+	public double getPosY() {
 		return posY;
 	}
-	public void setPosY(int posY) {
+	public void setPosY(double posY) {
 		this.posY = posY;
 	}
 
-	public int getVelX() {
+	public double getVelX() {
 		return velX;
 	}
-	public void setVelX(int velX) {
+	public void setVelX(double velX) {
 		this.velX = velX;
 	}
 
-	public int getVelY() {
+	public double getVelY() {
 		return velY;
 	}
-	public void setVelY(int velY) {
+	public void setVelY(double velY) {
 		this.velY = velY;
 	}
-	
-	
 }
